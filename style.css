@@ -1,0 +1,562 @@
+:root {
+    --bg_color: rgb(223, 237, 241);
+}
+
+html { 
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 480px;
+    max-width: 800px;
+    margin: auto;
+    font-size: 14px;
+    overflow-x:hidden;
+    overflow-y: scroll;
+
+}
+
+/* HEADER ******************************************************************************************************* */
+
+.myHeader {
+    display: grid;
+    grid-template-areas: 
+        "profileimage title contact";
+    /*grid-template-columns: 33% 33% 33%;  /*125*/
+    height: 130px;
+    /*box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);*/
+    /*border: 0.5px solid lightgrey;*/
+    background-color: var(--bg_color);
+    font-size: 12px;
+    grid-column-gap: 10px;
+}
+
+.myHeaderTitle {
+    grid-area: title;
+    text-align: center;
+    vertical-align: center;
+    color:#224058;
+    place-content: center;
+}
+
+.myHeaderContact {
+    grid-area: contact;
+    text-align: left;
+    display:grid;
+    grid-template-rows:
+        18px 18px 18px;
+    place-content: center;
+}
+
+.HeaderContactSocialMedia {
+    display: grid;
+    grid-template-columns:
+        18px 50px 150px;
+}
+
+.contact_image {
+    vertical-align: bottom;
+}
+
+.myHeaderPortrait {
+    grid-area: profileimage;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.myHeaderPortraitImage {width: 120px;height: 120px;}
+
+
+
+/* NAV BAR ******************************************************************************************************* */
+
+.navbar {
+    width:100%;
+    overflow:hidden;
+    /*color:#fff;*/
+    /*background-color:rgb(73, 73, 73);*/
+    color: #7AA0BD;
+    background-color: #7AA0BD;
+    display: flex; 
+    justify-content: center 
+
+}
+.navitem {
+    padding:8px 16px;
+    float:left;
+    width: 20%;
+    /*border: 0.5px solid lightgrey;*/
+    border: 0.5px solid #DAE8F3;
+    display:block;
+    outline:0;
+    font-weight: bold;
+    color: #DAE8F3;
+    background-color: #7AA0BD;
+}
+
+.navitem-selected {
+    color:#fff!important;
+    background-color:#336084!important
+}
+
+.navitem:hover {
+    color:#fff!important;
+    background-color:#507B9D!important
+}
+
+
+/* PROFILE SUMMARY ******************************************************************************************************* */
+
+
+#profile_container {
+    display: grid;
+    grid-template-areas: 
+        "profile_items profile_images";        /* 450px min, max 600px */
+    grid-template-columns: 300px minmax(150px,300px);
+    grid-column-gap: 40px;
+    grid-row-gap: 10px;
+    justify-content: center; 
+    place-content: center;
+    background-color: var(--bg_color);
+}
+.profile_items {grid-area: profile_items;}
+.profile_images {grid-area: profile_images;}
+
+
+.summary {line-height: 1.3;}
+.summary_title {
+    font-weight: 600;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    border: 0.5px solid lightgrey;
+    background-color: rgb(238, 238, 238);
+    padding: 5px
+}
+
+.profile_lists {
+    font-weight: normal;
+    font-size: 12px;
+    padding-left: 12px;
+    place-content: center;
+}
+
+.shipped_games_image {
+    /*height: 160px;*/
+    /*width: 100%;*/
+    display:block;
+    width:100%;
+    margin: auto;
+}
+
+.icons_row {
+    display: grid;
+    grid-template-columns: 
+        auto auto auto auto auto;
+    grid-column-gap: 10px;
+    place-content: center;
+    margin: auto;
+    width: 100%;
+}
+
+.tools_icons {
+    margin: auto;
+    width: 100%;
+    
+}
+
+
+/* PROJECTS ******************************************************************************************************* */
+
+.projects_container {
+    display: grid;  /* 450px min, max 600px */
+    grid-template-rows:
+        auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;    
+    grid-row-gap: 10px;
+    justify-content: center;
+    font-size: 12px;
+    padding:5px;
+    /*box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12); */
+    background-color: var(--bg_color);
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 
+        75px minmax(75px, 175px) minmax(75px, 125px) minmax(225px, 375px); /* 450px min, max 600px */
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    border: 0.5px solid lightgrey;
+    grid-column-gap: 10px;
+    font-size: 12px;
+    padding: 5px;
+    background-color: rgb(238, 238, 238);
+}
+
+#projectgrid_title, #projectgrid_description {
+    display: grid;
+    grid-template-rows:
+        min-content min-content min-content min-content min-content min-content;
+    /*align-items: top!important;*/
+}
+
+#projectgrid_title {font-weight: bold;}
+.project_subdetail {font-weight: normal; color:grey;}
+
+.projectgrid_deliveries {
+    padding-left: 20px;
+    margin-top: 0px;
+}
+.projectgrid_deliveries li {display: list-item;}
+
+
+
+/* DEV SKILLS ******************************************************************************************************* */
+
+
+.devskills_container {
+    display: grid;  /* 450px min, max 600px */
+    grid-template-rows:
+        auto auto auto;    
+    grid-row-gap: 10px;
+    justify-content: center;
+    font-size: 12px;
+    padding:5px;
+    /*box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12); */ 
+    background-color: var(--bg_color);
+}
+
+.time {
+    display: grid;
+    grid-template-columns: 
+        50px minmax(150px,325px) minmax(150px,325px);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    border: 0.5px solid lightgrey;
+    grid-column-gap: 50px;
+    padding: 5px;
+    background-color: rgb(238, 238, 238);
+}
+
+.time_title {
+    font-weight: 600;
+}
+
+
+.titleyears {text-align: left;}
+
+.competencyheader {
+    font-weight: 600;
+    font-size:14px;    
+}
+
+.skills_lists {
+    font-weight: normal;
+    font-size: 12px;
+    padding-left: 12px;
+}
+
+.skills_lists li {display: list-item;}
+
+
+/* WORK SAMPLES SKILLS ******************************************************************************************************* */
+
+.samples_container {
+    display: grid;  /* 450px min, max 600px */
+    grid-template-rows:
+        auto auto auto auto auto auto auto auto auto;    
+    grid-row-gap: 10px;
+    justify-content: center;
+    font-size: 12px;
+    padding:5px;
+    /*box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12); */
+    background-color: var(--bg_color);
+}
+
+.sample {
+    display: grid;  /* 450px min, max 600px */
+    grid-template-columns: 
+        minmax(225px,375px) minmax(225px, 375px);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    border: 0.5px solid lightgrey;
+    grid-column-gap: 30px;
+    font-size: 12px;
+    padding: 5px;
+    background-color: rgb(238, 238, 238);
+}
+
+.sample_screen {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.sample_lists {
+     padding-left: 12px;
+}
+
+.sample_lists li {display: list-item;}
+
+.samples_title {font-weight: 600;}
+
+
+/* INTERESTS ******************************************************************************************************* */
+
+
+.interests_container {
+    display: grid;  /* 450px min, max 600px */
+    grid-template-columns:
+        49% 49%;    
+    grid-column-gap: 10px;
+    width: auto auto;
+    justify-content: center;
+    font-size: 12px;
+    padding:5px;
+    /*box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12); */
+    background-color: var(--bg_color);
+}
+
+.interest_column {
+    display: grid;  
+    grid-template-rows: 
+        auto auto auto;
+    grid-row-gap: 10px; 
+}
+
+.interest {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    border: 0.5px solid lightgrey;
+    
+    font-size: 12px;
+    padding: 5px;
+    background-color: rgb(238, 238, 238);
+}
+
+.interest_image_group {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.interest_image {
+    height: 130px;
+}
+
+.workexperience {
+    font-family: Arial;
+    column-count: 2;
+}
+
+
+div div ul li {
+    display: inline-block;
+     width: 100%
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+complaints:
+
+hard to motivate
+- hard to get up, hard to get out of the house (getting better)
+
+bad habits
+- won't stop bringing snacks into the house
+- snacks in bed after midnight all the time
+- haven't cleaned your room in years
+- doesn't clean
+
+childish games
+- butt pokes
+- punch buggy
+
+needy
+- needs constant attention (this probably stems from not having own volition)
+
+unproductive sitting around the house
+- gambling habits
+
+struggling to have kids
+
+am i happy?
+
+we always need more
+- overstocked, supplies everywhere
+- too much food in the kitchen
+- nothing i do ever seems good enough
+
+unrealistic expectations with money
+- always extra shopping
+- constantly online shopping
+- doesn't track money
+- cars
+- holidays mean buying expensive gifts
+
+
+always needs more stuff
+- shoes
+
+not on the same page 
+- philosophical
+- always a fight
+- sexual; wants to poke my ass all the time :(
+- temperature
+- sleep
+- am not enjoying sex
+
+raises blood temperature
+
+
+
+pros:
+cooks
+vacuums
+does some laundry
+shops
+stylistic
+sentimental
+works
+likes hockey
+so sweet... would cry at this list / will cry
+blowjobs, oral, is game and giving
+loves me so much
+has taught me a lot
+
+
+tradeoffs:
+- cook less.  lighter fridge. cook healthier.  bacon and eggs for breakfast.  
+- no more feeling guilty
+- can sleep when i want, get up when i want
+- can date
+- can get sex, but not for a while
+- can masturbate freely
+- will be lonely, especially at night; do have parents & cookie nearby
+- have some relationship leads
+- dad could be property manager
+
+*/
+
+
+
+
+
+
+
+/*
+
+<div class="workexperience">
+                
+    <h2>DESIGN EXPERIENCE</h2>
+    <h4>PvZ: Battle For Neighborville - Technical Designer</h4>
+    
+    <ul>
+    <li>Prototype Game Modes and Game Features for Live Service content</li>
+    </ul>
+    <h4>Star Wars #3 (cancelled) - Technical Designer</h4>
+    <ul>
+        <li>Implemented the primary demo piece for gate reviews</li>
+        <li>Prototyped open-world gameplay systems</li>
+        <li>Prototyped galaxy and planetary traversal systems</li>
+    </ul>
+    <h4>PvZ Open World (cancelled) - Technical Designer</h4>
+    <ul>
+        <li>Implemented demo content for gate reviews</li>
+        <li>Designed and Prototyped environmental puzzles</li>
+        <li>Prototyped game worlds to validate gameplay mechanics</li>
+    </ul>
+    <h4>Star Wars #2 (cross-studio) (cancelled) - Technical Designer</h4>
+    <ul>
+        <li>Led designers to prototype and design ‘space gameplay’</li>
+        <li>Worked closely with SEs to architect the level-to-level flows</li>
+    </ul>
+    <h4>Star Wars Battlefront 2 (cross-studio) - Level Designer</h4>
+    <ul>
+        <li>Took over levels in development and delivered them to quality</li>
+    </ul>
+    <h4>Plants Vs Zombies: Garden Warfare 2 - Lead Single Player Designer</h4>
+    <ul>
+        <li>Designed and implemented the Single Player mode</li>
+        <li>Designed and implemented a game mode for end-game content</li>
+    </ul>
+    <h4>Battlefield: Hardline (cross-studio) - Level Designer</h4>
+    <ul>
+        <li>Took over levels in development and delivered them to quality </li>
+    </ul>
+    <h4>Star Wars #1 (cancelled) - Open World Designer</h4>
+    <ul>
+        <li>Designed open-world constructs and gameplay systems</li>
+        <li>Developed modular kit system approach to quickly iterate content</li>
+    </ul>
+    <h4>Jamaica (cancelled) - Online Systems Designer</h4>
+    <ul>
+        <li>Designed ‘shared online dynamic events’; Infinite Experience Engine</li>
+    </ul>
+    <h4>Medal Of Honor: Warfighter (cross-studio) - Level Designer</h4>
+    <ul>
+        <li>Built driving levels for first person shooter game</li>
+        <li>Worked with environment artist to create modular building approach</li>
+        <li>Took over FPS levels after delivering driving levels to quality</li>
+    </ul>
+    <h4>Army Of Two: Devil’s Cartel (cross-studio) - Level Designer</h4>
+    <ul>
+        <li>Took over levels in development and delivered them to quality </li>
+        <li>Designed and created new levels, focusing on gameplay twists</li>
+    </ul>
+    <h4>NFS: The Run - Challenge Series Designer</h4>
+    <ul>
+        <li>Built all the Challenge Series side content; created unique challenges with twist to re-purposed map content</li>
+    </ul>
+    <h4>Skate 1, Skate 2, and Skate 3 - Challenge Designer</h4>
+    <ul>
+        <li>Built numerous challenges using Maya, LUA, and Attribulater</li>
+        <li>Supported all designers to ensure all challenges functioned properly</li>
+    </ul>
+    
+</div>
+
+
+
+
+
+
+
+
+
+OTHER WORK EXPERIENCE
+                Base Station Transceiver Systems Test Engineer
+                Nortel Networks
+                2000 - 2002
+                
+                Test and troubleshoot base station transceiver systems (cell towers)
+                EDUCATION
+                B. Sc. Electronics Engineering Technology
+                DeVry Institute of Technology
+                
+                
+                1997 - 2000
+                Final project: took Sony Link Cable, splice in half, convert to USB, and plug into PC. My partner built software allowing users to list their games, and find other users to play online
+                Faculty Assistant: Graded exams and assignments, helped proctor exams, and assisted students with lab exercises
+
+
+
