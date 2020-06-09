@@ -111,6 +111,13 @@ body {
     background-color:#507B9D!important
 }
 
+/* COMMON ***************************************************************************************************************  */
+
+.blur{
+    filter: blur(2px)
+}
+
+
 
 /* PROFILE SUMMARY ******************************************************************************************************* */
 
@@ -201,11 +208,14 @@ body {
     display: grid;
     grid-template-rows:
         min-content min-content min-content min-content min-content min-content;
+    line-height: 19px;
     /*align-items: top!important;*/
+    
 }
 
-#projectgrid_title {font-weight: bold;}
-.project_subdetail {font-weight: normal; color:grey;}
+.projectgrid_title {font-weight: bold;}
+.project_subtitle {font-weight: bold;}
+.project_subdetail {color:darkslategrey;}
 
 .projectgrid_deliveries {
     padding-left: 20px;
@@ -213,7 +223,9 @@ body {
 }
 .projectgrid_deliveries li {display: list-item;}
 
-
+li {
+    padding: 0px 0px 3px 0px;
+}
 
 /* DEV SKILLS ******************************************************************************************************* */
 
@@ -345,6 +357,15 @@ body {
     height: 130px;
 }
 
+.interest_pic {
+    height: 185px;
+    max-width: 185px;
+}
+
+
+
+
+
 .workexperience {
     font-family: Arial;
     column-count: 2;
@@ -367,95 +388,6 @@ div div ul li {
 
 
 
-
-
-
-
-
-
-
-
-/*
-complaints:
-
-hard to motivate
-- hard to get up, hard to get out of the house (getting better)
-
-bad habits
-- won't stop bringing snacks into the house
-- snacks in bed after midnight all the time
-- haven't cleaned your room in years
-- doesn't clean
-
-childish games
-- butt pokes
-- punch buggy
-
-needy
-- needs constant attention (this probably stems from not having own volition)
-
-unproductive sitting around the house
-- gambling habits
-
-struggling to have kids
-
-am i happy?
-
-we always need more
-- overstocked, supplies everywhere
-- too much food in the kitchen
-- nothing i do ever seems good enough
-
-unrealistic expectations with money
-- always extra shopping
-- constantly online shopping
-- doesn't track money
-- cars
-- holidays mean buying expensive gifts
-
-
-always needs more stuff
-- shoes
-
-not on the same page 
-- philosophical
-- always a fight
-- sexual; wants to poke my ass all the time :(
-- temperature
-- sleep
-- am not enjoying sex
-
-raises blood temperature
-
-
-
-pros:
-cooks
-vacuums
-does some laundry
-shops
-stylistic
-sentimental
-works
-likes hockey
-so sweet... would cry at this list / will cry
-blowjobs, oral, is game and giving
-loves me so much
-has taught me a lot
-
-
-tradeoffs:
-- cook less.  lighter fridge. cook healthier.  bacon and eggs for breakfast.  
-- no more feeling guilty
-- can sleep when i want, get up when i want
-- can date
-- can get sex, but not for a while
-- can masturbate freely
-- will be lonely, especially at night; do have parents & cookie nearby
-- have some relationship leads
-- dad could be property manager
-
-*/
 
 
 

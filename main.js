@@ -17,7 +17,7 @@ window.addEventListener('load', function () {
 //selectActivity(event,'ProjectSummary')
 //selectActivity(event,'Competencies')
 //selectActivity(event,'Work')
-//selectActivity(event,'Interests')
+selectActivity(event,'Interests')
 
 })
 
